@@ -76,8 +76,8 @@
 						</@formGroup>
                         ${question_modify_template!}
                         <@formGroup>
-                            <@button type='submit' name='action_modifyQuestion' title='#i18n{forms.modifyEntry.buttonSave}' buttonIcon='save' size='' showTitleXs=false showTitleMd=false />
-                            <@aButton href='jsp/admin/plugins/forms/ManageQuestions.jsp?id_step=${step.id}' title='#i18n{forms.createEntry.buttonCancel}' buttonIcon='close' size='' showTitleXs=false  showTitleMd=false color='btn-secondary'/>
+                            <@button type='submit' name='action_modifyQuestion' title='#i18n{forms.modifyEntry.buttonSave}' buttonIcon='save' size='' hideTitle=['xs','md']  />
+                            <@aButton href='jsp/admin/plugins/forms/ManageQuestions.jsp?id_step=${step.id}' title='#i18n{forms.createEntry.buttonCancel}' buttonIcon='close' size='' hideTitle=['xs','md']  color='btn-secondary'/>
                         </@formGroup>
                     </fieldset>
                 </@tform>

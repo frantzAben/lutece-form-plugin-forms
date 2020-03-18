@@ -69,9 +69,9 @@
 							<@input type='text' name='css_class' id='css_class' value='${entry.CSSClass!}' maxlength=255 />
 						</@formGroup>
 						<@formGroup rows=2>
-							<@button type='submit' name='action_modifyQuestion' title='#i18n{forms.modifyEntry.buttonSave}' buttonIcon='save' size='' showTitleXs=false showTitleMd=false />
-							<@button type='submit' name='action_saveQuestion' title='#i18n{forms.modifyEntry.buttonApply}' value='apply' buttonIcon='check' size='' showTitleXs=false showTitleMd=false />
-							<@aButton href='jsp/admin/plugins/forms/ManageQuestions.jsp?id_step=${step.id}' title='#i18n{forms.createEntry.buttonCancel}' buttonIcon='close' size='' showTitleXs=false  showTitleMd=false color='btn-secondary'/>
+							<@button type='submit' name='action_modifyQuestion' title='#i18n{forms.modifyEntry.buttonSave}' buttonIcon='save' size='' hideTitle=['xs','md']/>
+							<@button type='submit' name='action_saveQuestion' title='#i18n{forms.modifyEntry.buttonApply}' value='apply' buttonIcon='check' size=''  hideTitle=['xs','md'] />
+							<@aButton href='jsp/admin/plugins/forms/ManageQuestions.jsp?id_step=${step.id}' title='#i18n{forms.createEntry.buttonCancel}' buttonIcon='close' size=''  hideTitle=['xs','md'] color='btn-secondary'/>
 						</@formGroup>
 					</@tform>
 				</@boxBody>
@@ -79,7 +79,7 @@
 		</@columns>
 			<!-- -----------------------OCR CONFIG MAPPING----------------------- -->
 
-		<#assign ocr_mapping_template= entryTypeService.getOcrConfigTemplate( step.id , question.id, entry.idEntry, fileType)>
+		<#assign ocr_mapping_template= entryTypeService.getOcrConfigTemplate( step.id, question.id, entry.idEntry, fileType)>
 
 		${ocr_mapping_template!}
 			<!-- ---------------------------------------------- -->

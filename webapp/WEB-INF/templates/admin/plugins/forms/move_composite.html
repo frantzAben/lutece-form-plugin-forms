@@ -16,7 +16,7 @@
                 <@inputGroup>
                     <@select name='id_step' items=list_steps default_value='${id_step!}' />
                     <@inputGroupItem>
-                        <@button type='submit' name="view_moveComposite" value="validateStep" showTitle=false buttonIcon='check'/>
+                        <@button type='submit' name="view_moveComposite" value="validateStep" hideTitle=['all'] buttonIcon='check'/>
                     </@inputGroupItem>
                 </@inputGroup>
             </@formGroup>
@@ -24,7 +24,7 @@
                 <@inputGroup>
                     <@select name='id_parent' items=list_groups default_value='${id_parent!}' />
                     <@inputGroupItem>
-                        <@button type='submit' name="view_moveComposite" value="validateGroup" showTitle=false buttonIcon='check'/>
+                        <@button type='submit' name="view_moveComposite" value="validateGroup" hideTitle=['all'] buttonIcon='check'/>
                     </@inputGroupItem>
                 </@inputGroup>
             </@formGroup>

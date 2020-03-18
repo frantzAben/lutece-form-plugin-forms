@@ -30,8 +30,8 @@
 							</@formGroup>
 						</#if>
 						<@formGroup>
-							<@button type='submit' name='action_createField' buttonIcon='save' title='#i18n{forms.modifyEntry.buttonSave}' showTitleXs=false />
-							<@aButton href='jsp/admin/plugins/forms/ManageQuestions.jsp?view=modifyQuestion&id_step=${question.idStep}&id_question=${question.id}' title='#i18n{forms.createEntry.buttonCancel}' buttonIcon='close' showTitleXs=false color='btn-secondary' />
+							<@button type='submit' name='action_createField' buttonIcon='save' title='#i18n{forms.modifyEntry.buttonSave}' hideTitle=['xs'] />
+							<@aButton href='jsp/admin/plugins/forms/ManageQuestions.jsp?view=modifyQuestion&id_step=${question.idStep}&id_question=${question.id}' title='#i18n{forms.createEntry.buttonCancel}' buttonIcon='close' hideTitle=['xs'] color='btn-secondary' />
 						</@formGroup>
 					</@tform>
         		</fieldset>

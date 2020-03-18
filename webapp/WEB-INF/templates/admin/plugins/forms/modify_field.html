@@ -31,8 +31,8 @@
 							</@formGroup>
 						</#if>
 						<@formGroup>
-                            <@button type='submit' name='action_modifyField' buttonIcon='save' title='#i18n{forms.modifyEntry.buttonSave}' color='btn-link' showTitleXs=false />
-                            <@aButton href='jsp/admin/plugins/forms/ManageQuestions.jsp?view=modifyQuestion&id_step=${question.idStep}&id_question=${question.id}' title='#i18n{forms.createEntry.buttonCancel}' buttonIcon='close' showTitleXs=false color='btn-link' />
+                            <@button type='submit' name='action_modifyField' buttonIcon='save' title='#i18n{forms.modifyEntry.buttonSave}' color='btn-link' hideTitle=['xs'] />
+                            <@aButton href='jsp/admin/plugins/forms/ManageQuestions.jsp?view=modifyQuestion&id_step=${question.idStep}&id_question=${question.id}' title='#i18n{forms.createEntry.buttonCancel}' buttonIcon='close' hideTitle=['xs'] color='btn-link' />
 						</@formGroup>
        				 </fieldset>
 				</@tform>

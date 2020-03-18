@@ -74,8 +74,8 @@
 							<@input type='text' name='css_class' id='css_class' value='${entry.CSSClass!}' maxlength=255 />
 						</@formGroup>
 						<@formGroup>
-							<@button type='submit' buttonIcon='save' title='#i18n{forms.modifyEntry.buttonSave}' showTitleXs=false color='btn-primary' size='' />
-							<@button type='button' buttonIcon='close' title='#i18n{forms.modifyEntry.buttonCancel}' showTitleXs=false color='btn-default' params='onclick="javascript:window.history.back();"' size='' />
+							<@button type='submit' buttonIcon='save' title='#i18n{forms.modifyEntry.buttonSave}' hideTitle=['xs']  color='btn-primary' size='' />
+							<@button type='button' buttonIcon='close' title='#i18n{forms.modifyEntry.buttonCancel}' hideTitle=['xs'] color='btn-default' params='onclick="javascript:window.history.back();"' size='' />
 						</@formGroup>
 					</fieldset>
 				</@tform>

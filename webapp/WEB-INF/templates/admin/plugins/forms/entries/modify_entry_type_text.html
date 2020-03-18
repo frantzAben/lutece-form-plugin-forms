@@ -34,7 +34,7 @@
 			</@formGroup>
 			<@formGroup>
 				<#if entry.mandatory><#assign checked = true /></#if>
-				<@checkBox labelFor='mandatory' labelKey='#i18n{forms.createEntry.labelMandatory}' name='mandatory' value='1' checked=checked />
+				<@checkBox id='cbxMandatory'labelFor='mandatory' labelKey='#i18n{forms.createEntry.labelMandatory}' name='mandatory' value='1' checked=checked />
 			</@formGroup>
 			<@formGroup labelFor='errorMessage' labelKey='#i18n{forms.createEntry.labelMandatoryErrorMessage}' helpKey='#i18n{forms.createEntry.labelMandatoryErrorMessageHelp}'>
 				<@input type='textarea' name='errorMessage' id='errorMessage' rows=2>${entry.errorMessage!}</@input>
@@ -89,9 +89,9 @@
 			</@formGroup>
 			${question_modify_template!}
 			<@formGroup>
-				<@button type='submit' name='action_modifyQuestion' buttonIcon='save' title='#i18n{forms.modifyEntry.buttonSave}' showTitleXs=false size='' />
-				<@button type='submit' name='action_saveQuestion' buttonIcon='check' title='#i18n{forms.modifyEntry.buttonApply}' showTitleXs=false size='' />
-				<@aButton href='jsp/admin/plugins/forms/ManageQuestions.jsp?id_step=${step.id}' buttonIcon='close' title='#i18n{forms.createEntry.buttonCancel}' showTitleXs=false size='' color='btn-secondary' />
+				<@button type='submit' name='action_modifyQuestion' buttonIcon='save' title='#i18n{forms.modifyEntry.buttonSave}' hideTitle=['xs'] size='' />
+				<@button type='submit' name='action_saveQuestion' buttonIcon='check' title='#i18n{forms.modifyEntry.buttonApply}' hideTitle=['xs'] size='' />
+				<@aButton href='jsp/admin/plugins/forms/ManageQuestions.jsp?id_step=${step.id}' buttonIcon='close' title='#i18n{forms.createEntry.buttonCancel}' hideTitle=['xs'] size='' color='btn-secondary' />
 			</@formGroup>
 		</@tform>
 		</fieldset>

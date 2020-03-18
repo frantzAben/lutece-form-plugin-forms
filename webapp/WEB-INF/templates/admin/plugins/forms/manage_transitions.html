@@ -50,7 +50,7 @@
                                         <th class="col-sm-1">#i18n{forms.manage_transitions.columnPriority}</th>
                                         <th class="col-sm-4">#i18n{forms.manageForm.columnActions}
                                         <#if !step.final>               
-                                            <@aButton href='jsp/admin/plugins/forms/ManageTransitions.jsp?view=createTransition&id_step=${step.id}' buttonIcon='plus  text-success' title='#i18n{forms.manage_transitions.buttonAdd}' color='btn-link' class='pull-right' showTitleXs=false size='' params='data-toggle="modal" data-target="#transitionModal"' />
+                                            <@aButton href='jsp/admin/plugins/forms/ManageTransitions.jsp?view=createTransition&id_step=${step.id}' buttonIcon='plus  text-success' title='#i18n{forms.manage_transitions.buttonAdd}' color='btn-link' class='pull-right' hideTitle=['xs'] size='' params='data-toggle="modal" data-target="#transitionModal"' />
                                         </#if>
                                         </th>
                                     </tr>
@@ -60,14 +60,14 @@
                                         <td class="col-sm-1"><@badge>${transition.priority}</@badge></td>
                                         <td class="col-sm-4">
                                             <#if transition_index gt 0>
-                                                <@aButton href='jsp/admin/plugins/forms/ManageTransitions.jsp?action=moveUpPriority&id_step=${step.id}&id_transition=${transition.id}' title='#i18n{forms.manage_transitions.action.moveUpPriorityTransition}' showTitle=false buttonIcon='chevron-up' color='btn-link' />
+                                                <@aButton href='jsp/admin/plugins/forms/ManageTransitions.jsp?action=moveUpPriority&id_step=${step.id}&id_transition=${transition.id}' title='#i18n{forms.manage_transitions.action.moveUpPriorityTransition}' hideTitle=['all'] buttonIcon='chevron-up' color='btn-link' />
                                             </#if>
                                             <#if transition_has_next>
-                                                <@aButton href='jsp/admin/plugins/forms/ManageTransitions.jsp?action=moveDownPriority&id_step=${step.id}&id_transition=${transition.id}' title='#i18n{forms.manage_transitions.action.moveDownPriorityTransition}' showTitle=false buttonIcon='chevron-down' color='btn-link' />
+                                                <@aButton href='jsp/admin/plugins/forms/ManageTransitions.jsp?action=moveDownPriority&id_step=${step.id}&id_transition=${transition.id}' title='#i18n{forms.manage_transitions.action.moveDownPriorityTransition}' hideTitle=['all'] buttonIcon='chevron-down' color='btn-link' />
                                             </#if>
-                                            <@aButton href='jsp/admin/plugins/forms/ManageTransitions.jsp?view=modifyTransition&id_step=${step.id}&id_transition=${transition.id}' title='#i18n{forms.manage_transitions.action.modifyTransition}' showTitle=false buttonIcon='pencil' color='btn-link btn-iframe' />
-                                            <@aButton href='jsp/admin/plugins/forms/ManageControls.jsp?view=manageControl&id_step=${step.id}&id_target=${transition.id}&control_type=TRANSITION' title='#i18n{forms.manage_controls.action.modifyControl}' showTitle=false buttonIcon='cog' color='btn-link btn-iframe'/>
-                                            <@aButton href='jsp/admin/plugins/forms/ManageTransitions.jsp?view=confirmRemoveTransition&id_transition=${transition.id}' title='#i18n{forms.manage_transitions.action.removeTransition}' showTitle=false buttonIcon='trash' class='text-danger' color='btn-link'  /> 
+                                            <@aButton href='jsp/admin/plugins/forms/ManageTransitions.jsp?view=modifyTransition&id_step=${step.id}&id_transition=${transition.id}' title='#i18n{forms.manage_transitions.action.modifyTransition}' hideTitle=['all'] buttonIcon='pencil' color='btn-link btn-iframe' />
+                                            <@aButton href='jsp/admin/plugins/forms/ManageControls.jsp?view=manageControl&id_step=${step.id}&id_target=${transition.id}&control_type=TRANSITION' title='#i18n{forms.manage_controls.action.modifyControl}' hideTitle=['all'] buttonIcon='cog' color='btn-link btn-iframe'/>
+                                            <@aButton href='jsp/admin/plugins/forms/ManageTransitions.jsp?view=confirmRemoveTransition&id_transition=${transition.id}' title='#i18n{forms.manage_transitions.action.removeTransition}' hideTitle=['all'] buttonIcon='trash' class='text-danger' color='btn-link'  /> 
                                         </td>
                                     </tr>
                                     </#list>

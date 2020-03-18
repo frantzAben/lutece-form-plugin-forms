@@ -66,9 +66,9 @@
 						</@formGroup>
                                                                 ${question_modify_template!}
 						<@formGroup rows=2>
-							<@button type='submit' name='action_modifyQuestion' title='#i18n{forms.modifyEntry.buttonSave}' buttonIcon='save' size='' showTitleXs=false showTitleMd=false />
-							<@button type='submit' name='action_saveQuestion' title='#i18n{forms.modifyEntry.buttonApply}' value='apply' buttonIcon='check' size='' showTitleXs=false showTitleMd=false />
-							<@aButton href='jsp/admin/plugins/forms/ManageQuestions.jsp?id_step=${step.id}' title='#i18n{forms.createEntry.buttonCancel}' buttonIcon='close' size='' showTitleXs=false  showTitleMd=false color='btn-secondary'/>
+							<@button type='submit' name='action_modifyQuestion' title='#i18n{forms.modifyEntry.buttonSave}' buttonIcon='save' size='' hideTitle=['xs','md'] />
+							<@button type='submit' name='action_saveQuestion' title='#i18n{forms.modifyEntry.buttonApply}' value='apply' buttonIcon='check' size=''hideTitle=['xs','md'] />
+							<@aButton href='jsp/admin/plugins/forms/ManageQuestions.jsp?id_step=${step.id}' title='#i18n{forms.createEntry.buttonCancel}' buttonIcon='close' size='' hideTitle=['xs','md'] color='btn-secondary'/>
 						</@formGroup>
 					</@tform>
 				</@boxBody>
@@ -118,14 +118,14 @@
 										</#if>     	
 									</td>
 									<td>
-										<@aButton href='jsp/admin/plugins/forms/ModifyEntry.jsp?view=modifyField&id_question=${question.id}&id_field=${field.idField}&option_no_display_title=true' title='#i18n{portal.util.labelModify}' buttonIcon='edit' showTitle=false />
+										<@aButton href='jsp/admin/plugins/forms/ModifyEntry.jsp?view=modifyField&id_question=${question.id}&id_field=${field.idField}&option_no_display_title=true' title='#i18n{portal.util.labelModify}' buttonIcon='edit' hideTitle=['all'] />
 										<#if cpt!=1>
-										<@aButton href='jsp/admin/plugins/forms/ModifyEntry.jsp?action=moveFieldUp&id_question=${question.id}&id_field=${field.idField}#list' title='#i18n{forms.createEntry.manageField.titleMoveUp}' buttonIcon='chevron-up' showTitle=false />
+										<@aButton href='jsp/admin/plugins/forms/ModifyEntry.jsp?action=moveFieldUp&id_question=${question.id}&id_field=${field.idField}#list' title='#i18n{forms.createEntry.manageField.titleMoveUp}' buttonIcon='chevron-up' hideTitle=['all'] />
 										</#if> 
 										<#if field_has_next>
-										<@aButton href='jsp/admin/plugins/forms/ModifyEntry.jsp?action=moveFieldDown&id_question=${question.id}&id_field=${field.idField}#list' title='#i18n{forms.createEntry.manageField.titleMoveDown}' buttonIcon='chevron-down' showTitle=false />
+										<@aButton href='jsp/admin/plugins/forms/ModifyEntry.jsp?action=moveFieldDown&id_question=${question.id}&id_field=${field.idField}#list' title='#i18n{forms.createEntry.manageField.titleMoveDown}' buttonIcon='chevron-down' hideTitle=['all'] />
 										</#if>
-										<@aButton href='jsp/admin/plugins/forms/ModifyEntry.jsp?view=confirmRemoveField&id_question=${question.id}&id_field=${field.idField}#list' title='#i18n{forms.createEntry.manageField.titleDelete}' buttonIcon='trash' showTitle=false color='btn-danger' />
+										<@aButton href='jsp/admin/plugins/forms/ModifyEntry.jsp?view=confirmRemoveField&id_question=${question.id}&id_field=${field.idField}#list' title='#i18n{forms.createEntry.manageField.titleDelete}' buttonIcon='trash' hideTitle=['all'] color='btn-danger' />
 									 </td>
 									</tr>
 								</#if>

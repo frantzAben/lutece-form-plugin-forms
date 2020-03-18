@@ -38,7 +38,7 @@
     </#if>
 
     <div id="listUpload">
-      <@addUploadedFilesBox fieldName=fieldName handler=uploadHandler listFiles=listFiles />
+      <@addUploadedFilesBox fieldName=fieldName handler=uploadHandler listFiles=listFiles!lisFiles1 />
     </div>
 
     <#if list_responses?? && list_responses?has_content>

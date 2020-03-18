@@ -31,8 +31,8 @@
                                                 </@formGroup>
                                                 ${question_modify_template!}
 						<@formGroup>
-							<@button type='submit' name='action_modifyQuestion' buttonIcon='save' title='#i18n{forms.createEntry.buttonSave}' showTitleXs=false size='' />
-							<@button type='button' name='cancel' buttonIcon='close' title='#i18n{forms.createEntry.buttonCancel}' showTitleXs=false size='' color='btn-secondary' params='onclick="javascript:window.history.back();"' />
+							<@button type='submit' name='action_modifyQuestion' buttonIcon='save' title='#i18n{forms.createEntry.buttonSave}' hideTitle=['xs'] size='' />
+							<@button type='button' name='cancel' buttonIcon='close' title='#i18n{forms.createEntry.buttonCancel}' hideTitle=['xs']  size='' color='btn-secondary' params='onclick="javascript:window.history.back();"' />
 						</@formGroup>
 					</@tform>
 				</fieldset>
